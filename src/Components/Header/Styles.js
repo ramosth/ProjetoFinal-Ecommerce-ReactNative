@@ -8,17 +8,24 @@ const Styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: '5%',
     },
-    tituloTopo: {
+    tituloLocal: {
+        color: color.azul,
+        fontSize: 15,
+    },
+    topo: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: '30%',
+        marginLeft: '25%',
     },
     location: {
         color: color.laranja,
     },
     seta: {
         color: color.cinzaClaro,
+    },
+    filter: {
+        color: color.azul,
     },
 })
 

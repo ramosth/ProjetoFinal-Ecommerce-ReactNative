@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import BestSeller from './src/Components/BestSeller';
-
 import Header from './src/Components/Header/Header';
-
+import HeaderTwo from './src/Components/HeaderTwo/HeaderTwo';
+import HeaderTree from './src/Components/HeaderTree/HeaderTree';
 const App = () => {
 
   return (
@@ -15,10 +15,11 @@ const App = () => {
     //     </View>
     //   </ScrollView>
     // </SafeAreaView>
-    <View>
-      <Header />
-      <BestSeller />
-    </View>
+    // <View>
+      
+    //   <BestSeller /> 
+    // </View>
+    <HeaderTree />
   );
 };
 

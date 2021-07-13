@@ -9,18 +9,18 @@ const Header = () => {
     return (
         <View style={Styles.barraTopo}>
 
-            <View style={Styles.tituloTopo}>
+            <View style={Styles.topo}>
                 <TouchableOpacity>
-                    <Icon name="md-location-outline" size={15} style={Styles.location}/>
+                    <Icon name="md-location-outline" size={18} style={Styles.location}/>
                 </TouchableOpacity>
-                <Text>Zihuatanejo, Gro</Text>
+                <Text style={Styles.tituloLocal}>Zihuatanejo, Gro</Text>
                 <TouchableOpacity>
                     <Seta name="keyboard-arrow-down" size={18} style={Styles.seta}/>
                 </TouchableOpacity>
             </View>
             
             <TouchableOpacity>
-                <Filter name="filter" size={15}/>
+                <Filter name="filter" size={18} style={Styles.filter}/>
             </TouchableOpacity>
 
         </View>
