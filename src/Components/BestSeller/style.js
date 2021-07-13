@@ -8,7 +8,6 @@ const style = StyleSheet.create({
     row: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'baseline',
         marginTop: '5%'
     },
     title: {
@@ -19,7 +18,13 @@ const style = StyleSheet.create({
     seeMore: {
         color: colors.laranja,
         fontSize: 15,
-    }
+    },
+    titulos: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: '5%',
+        alignItems: 'baseline'
+    },
 })
 
 export default style;
