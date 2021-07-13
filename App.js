@@ -4,9 +4,8 @@ import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  Text,
-  View,
 } from 'react-native';
+import SelectCategory from './src/Components/SelectCategory';
 
 const App = () => {
 
@@ -14,9 +13,7 @@ const App = () => {
     <SafeAreaView>
       <StatusBar />
       <ScrollView>
-        <View>
-          <Text>App</Text>
-        </View>
+        <SelectCategory />
       </ScrollView>
     </SafeAreaView>
   );
