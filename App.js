@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import BestSeller from './src/Components/BestSeller';
 
 import Header from './src/Components/Header/Header';
 
@@ -14,7 +15,10 @@ const App = () => {
     //     </View>
     //   </ScrollView>
     // </SafeAreaView>
-    <Header/>
+    <View>
+      <Header />
+      <BestSeller />
+    </View>
   );
 };
 
