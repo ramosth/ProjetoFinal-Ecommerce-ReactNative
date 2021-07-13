@@ -6,7 +6,7 @@ import style from './style'
 const BestSeller = () => {
     return (
         <View style={style.container}>
-            <View style={style.row}>
+            <View style={style.titulos}>
                 <Text style={style.title}>Best Seller</Text>
                 <TouchableOpacity>
                     <Text style={style.seeMore}>see more</Text>

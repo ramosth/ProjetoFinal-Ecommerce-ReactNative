@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React from 'react'
+import { View } from 'react-native'
 import BestSeller from './src/Components/BestSeller';
 import Header from './src/Components/Header/Header';
 import HeaderTwo from './src/Components/HeaderTwo/HeaderTwo';
