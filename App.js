@@ -1,24 +1,20 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  View,
-} from 'react-native';
+
+import Header from './src/Components/Header/Header';
 
 const App = () => {
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <ScrollView>
-        <View>
-          <Text>App</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    // <SafeAreaView>
+    //   <StatusBar />
+    //   <ScrollView>
+    //     <View>
+
+    //     </View>
+    //   </ScrollView>
+    // </SafeAreaView>
+    <Header/>
   );
 };
 

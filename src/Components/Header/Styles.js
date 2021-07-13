@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import color from '../../assets/colors/colors'
-import Font from '../../assets/fonts'
 
 const Styles = StyleSheet.create({
     barraTopo: {
