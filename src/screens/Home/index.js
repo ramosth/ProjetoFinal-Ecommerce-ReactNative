@@ -8,11 +8,11 @@ import HotSales from '../../Components/HotSales';
 import QrCode from '../../Components/QrCode';
 import BestSeller from '../../Components/BestSeller';
 
-const Home = ({navigation}) => {
+const Home = props => {
   const [input, setInput] = useState('');
   return (
     <ScrollView>
-      <View >
+      <View>
         <Header />
         <SelectCategory />
         <View style={Style.pesquisa}>
@@ -25,8 +25,8 @@ const Home = ({navigation}) => {
           <QrCode />
         </View>
         <View>
-            <HotSales />
-            <BestSeller nav={navigation} />
+          <HotSales />
+          <BestSeller />
         </View>
       </View>
     </ScrollView>
