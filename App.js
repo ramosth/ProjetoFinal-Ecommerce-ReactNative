@@ -10,8 +10,8 @@ import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
 // import HotSales from './src/Components/HotSales';
 // import QrCode from './src/Components/QrCode';
 // import Card from './src/screens/Card';
-import CardFotoProduto from './src/Components/CardFotoProduto';
-import CardDetalhes from './src/Components/CardDetalhes';
+// import { Home } from './src/screens/Home';
+import {Details} from './src/screens/Details';
 
 const App = () => {
   // const [input, setInput] = useState('');
@@ -33,10 +33,8 @@ const App = () => {
           />
           <QrCode />
           <HotSales /> */}
-          {/* <BestSeller /> */}
+          <Details />
           {/* <Card /> */}
-          <CardFotoProduto />
-          <CardDetalhes />
         </View>
       </ScrollView>
     </SafeAreaView>

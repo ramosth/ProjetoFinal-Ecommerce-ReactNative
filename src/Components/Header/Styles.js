@@ -11,6 +11,7 @@ const Styles = StyleSheet.create({
     tituloLocal: {
         color: color.azul,
         fontSize: 15,
+        fontFamily: 'Montserrat-Medium',
     },
     topo: {
         flexDirection: 'row',

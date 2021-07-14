@@ -24,6 +24,7 @@ const Styles = StyleSheet.create({
     titulo: {
         color: color.azul,
         fontSize: 18,
+        fontFamily: 'Montserrat-Medium',
     },
 
 });
