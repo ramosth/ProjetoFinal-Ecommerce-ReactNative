@@ -33,6 +33,5 @@ export const categoriesData = [
     icon: (
       <MaterialIcons name="sports-esports" size={30} color={colors.cinza} />
     ),
-    selected: false,
   },
 ];

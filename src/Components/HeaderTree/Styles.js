@@ -29,6 +29,7 @@ const Styles = StyleSheet.create({
         color: color.azul,
         fontSize: 16,
         margin: 10,
+        fontFamily: 'Montserrat-SemiBoold',
     },
 
 });

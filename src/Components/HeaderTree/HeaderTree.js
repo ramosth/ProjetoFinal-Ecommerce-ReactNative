@@ -7,7 +7,7 @@ const HeaderTree = () => {
     return (
         <View style={Styles.topo}>
             <TouchableOpacity>
-                <Icon name="arrow-left" style={Styles.setaRetorno}/>
+                <Icon name="arrow-left" size={15} style={Styles.setaRetorno}/>
             </TouchableOpacity>
             
             <View style={Styles.adress}>
