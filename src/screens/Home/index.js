@@ -8,7 +8,7 @@ import HotSales from '../../Components/HotSales';
 import QrCode from '../../Components/QrCode';
 import BestSeller from '../../Components/BestSeller';
 
-export const Home = () => {
+const Home = ({navigation}) => {
   const [input, setInput] = useState('');
   return (
     <ScrollView>
@@ -26,9 +26,11 @@ export const Home = () => {
         </View>
         <View>
             <HotSales />
-            <BestSeller />
+            <BestSeller nav={navigation} />
         </View>
       </View>
     </ScrollView>
   );
 };
+
+export default Home;

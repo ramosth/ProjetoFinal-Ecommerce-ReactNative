@@ -3,13 +3,13 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 import style from './style';
 import Icon from 'react-native-vector-icons/EvilIcons'
 
-const CardProduto = () => {
+const CardProduto = ({navigation}) => {
 
     return (
 
         <View style={style.card}>
             <Image style={style.imagem} source={require('../../../assets/images/Samsung-Galaxy-S20-Ultra-Preto.png')} />
-            <TouchableOpacity style={style.favorito}>
+            <TouchableOpacity style={style.favorito} onPress={() => navigation.navigate('Details')}>
                 <Icon style={style.icone} name="heart" size={20}/>
             </TouchableOpacity>
             <TouchableOpacity style={style.margem}>
@@ -21,7 +21,7 @@ const CardProduto = () => {
             </TouchableOpacity>
         </View>
 
-    )
+    );
 }
 
 export default CardProduto;
