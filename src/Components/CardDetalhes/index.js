@@ -1,26 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import colors from '../../assets/colors/colors';
 import ButtonOrange from '../ButtonOrange';
+import Stars from '../Stars';
 import styles from './styles';
 
 const CardDetalhes = props => {
+  const [coracao, setCoracao] = useState(false);
   return (
     <View style={styles.container}>
       <View style={styles.card}>
         <View style={styles.linha1}>
           <Text style={styles.nomeProduto}>Nome do produto</Text>
-          <TouchableOpacity style={styles.favoritar}>
-            <Icon style={{color: '#fff'}} name="heart-outlined" size={20} />
+          <TouchableOpacity
+            style={styles.favoritar}
+            onPress={() => setCoracao(!coracao)}>
+            <Icon
+              style={
+                coracao ? [{color: colors.laranja}] : [{color: colors.branco}]
+              }
+              name="heart"
+              size={20}
+            />
           </TouchableOpacity>
         </View>
         <View style={styles.stars}>
-          <Icon name="star-outlined" size={20} />
-          <Icon name="star-outlined" size={20} />
-          <Icon name="star-outlined" size={20} />
-          <Icon name="star-outlined" size={20} />
-          <Icon name="star-outlined" size={20} />
+          <Stars />
         </View>
         <View style={styles.detalhes}>
           <Text style={styles.cabecalhoDetalhes}>Detalhes</Text>

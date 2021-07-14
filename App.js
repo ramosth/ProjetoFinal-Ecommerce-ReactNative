@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
-import BestSeller from './src/Components/BestSeller';
+import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
+// import BestSeller from './src/Components/BestSeller';
 // import Header from './src/Components/Header/Header';
 // import HeaderTwo from './src/Components/HeaderTwo/HeaderTwo';
 // import HeaderTree from './src/Components/HeaderTree/HeaderTree';
@@ -10,9 +10,10 @@ import BestSeller from './src/Components/BestSeller';
 // import HotSales from './src/Components/HotSales';
 // import QrCode from './src/Components/QrCode';
 // import Card from './src/screens/Card';
+import CardFotoProduto from './src/Components/CardFotoProduto';
+import CardDetalhes from './src/Components/CardDetalhes';
 
 const App = () => {
-
   // const [input, setInput] = useState('');
 
   return (
@@ -32,8 +33,10 @@ const App = () => {
           />
           <QrCode />
           <HotSales /> */}
-          <BestSeller />
+          {/* <BestSeller /> */}
           {/* <Card /> */}
+          <CardFotoProduto />
+          <CardDetalhes />
         </View>
       </ScrollView>
     </SafeAreaView>

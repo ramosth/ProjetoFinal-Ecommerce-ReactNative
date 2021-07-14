@@ -8,6 +8,7 @@ const CardFotoProduto = props => {
     <View style={styles.container}>
       <View style={styles.card}>
         <Image
+          resizeMode="contain"
           style={styles.foto}
           source={require('../../assets/images/celularDetalhe.png')}
         />
