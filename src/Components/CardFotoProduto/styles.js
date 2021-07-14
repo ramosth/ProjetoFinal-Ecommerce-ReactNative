@@ -3,7 +3,7 @@ import colors from '../../assets/colors/colors';
 
 const styles = StyleSheet.create({
   container: {alignItems: 'center'},
-  foto: {width: '80%', height: '100%'},
+  foto: {width: '90%', height: '90%'},
   card: {
     alignItems: 'center',
     justifyContent: 'center',

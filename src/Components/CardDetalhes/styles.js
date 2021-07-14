@@ -3,7 +3,7 @@ import colors from '../../assets/colors/colors';
 
 const styles = StyleSheet.create({
   container: {},
-  nomeProduto: {fontSize: 24},
+  nomeProduto: {fontSize: 24, fontFamily: 'Montserrat-Bold'},
   favoritar: {
     width: 37,
     height: 37,
@@ -33,10 +33,12 @@ const styles = StyleSheet.create({
   cabecalhoDetalhes: {
     color: colors.azul,
     fontSize: 20,
+    fontFamily: 'Montserrat-Bold',
   },
   textoDetalhes: {
-    paddingTop: 15,
+    paddingTop: 1,
     textAlign: 'justify',
+    fontFamily: 'Montserrat-Regular',
   },
   texto: {
     fontSize: 20,
@@ -44,7 +46,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
   },
   stars: {
-    flexDirection: 'row',
     width: '100%',
   },
 });

@@ -1,12 +1,12 @@
-import React from 'react'
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import style from './style';
-import Icon from 'react-native-vector-icons/EvilIcons'
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 const CardProduto = ({navigation}) => {
 
     return (
-
+        <View>
         <View style={style.card}>
             <Image style={style.imagem} source={require('../../../assets/images/Samsung-Galaxy-S20-Ultra-Preto.png')} />
             <TouchableOpacity style={style.favorito} onPress={() => navigation.navigate('Details')}>
@@ -20,8 +20,11 @@ const CardProduto = ({navigation}) => {
                 <Text style={style.nomeProduto}>Samsung Galaxy s20 Ultra</Text>
             </TouchableOpacity>
         </View>
-
-    );
-}
+        <TouchableOpacity>
+        <Text style={style.nomeProduto}>Samsung Galaxy s20 Ultra</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 export default CardProduto;
