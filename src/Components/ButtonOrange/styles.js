@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   texto: {
-    fontSize: 20,
+    fontSize: 17,
     color: '#fff',
     fontFamily: 'Montserrat-Bold',
   },
