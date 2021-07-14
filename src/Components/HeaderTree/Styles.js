@@ -17,13 +17,13 @@ const Styles = StyleSheet.create({
         backgroundColor: color.azul,
         color: color.branco,
         borderRadius: 10,
-        padding: 15,
+        padding: 10,
     },
     bag: {
         backgroundColor: color.laranja,
         color: color.branco,
         borderRadius: 10,
-        padding: 15,
+        padding: 10,
     },
     titulo: {
         color: color.azul,

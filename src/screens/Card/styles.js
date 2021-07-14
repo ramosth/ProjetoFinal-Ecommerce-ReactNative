@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   titleWrapper: {
-    height: windowHeigth * 0.25,
+    height: windowHeigth * 0.22,
     paddingHorizontal: 15,
     paddingTop: 10,
   },
@@ -17,17 +17,17 @@ export const styles = StyleSheet.create({
     fontSize: 35,
     color: colors.azul,
     marginLeft: 16,
-    marginTop: 50,
+    marginTop: 30,
     marginBottom: 20,
   },
   cardItemsWrapper: {
     flex: 1,
-    height: windowHeigth * 0.8,
+    height: windowHeigth * 0.742,
     backgroundColor: colors.azul,
-    marginTop: -20,
+    paddingTop: 20,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    paddingTop: 60,
+
   },
   itens: {
     height: windowHeigth * 0.5,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
   },
   itemUnico: {
     flexDirection: 'row',
-    marginBottom: 40,
+    marginBottom: 20,
   },
   hr: {
     borderColor: colors.cinza,
@@ -55,26 +55,26 @@ export const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Regular',
     fontSize: 15,
     color: colors.branco,
-    marginTop: 13,
+    marginTop: 5,
   },
   totalValor: {
     fontFamily: 'Montserrat-SemiBold',
     fontSize: 15,
     color: colors.branco,
-    marginTop: 13,
+    marginTop: 5,
   },
   botao: {
     flex: 1,
     height: windowHeigth * 0.35,
     alignItems: 'center',
-    marginTop: 27,
+    marginTop: 10,
   },
   buttonCheckout: {
     width: 330,
     height: 56,
   },
   imagemWrapper: {
-    marginLeft: 33,
+    marginLeft: 20,
     borderRadius: 10,
   },
   imagem: {
@@ -83,7 +83,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
   },
   textoItem: {
-    marginLeft: 30,
+    marginLeft: 20,
   },
   textoItemTitulo: {
     fontFamily: 'Montserrat-Medium',
@@ -113,7 +113,7 @@ export const styles = StyleSheet.create({
     height: 88,
     width: 22,
     borderRadius: 26,
-    marginRight: 25,
+    marginRight: 15,
   },
   buttonQuantidade: {
     backgroundColor: 'transparent',

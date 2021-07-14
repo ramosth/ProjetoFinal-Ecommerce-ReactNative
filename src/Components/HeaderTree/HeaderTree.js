@@ -13,7 +13,7 @@ const HeaderTree = () => {
             <View style={Styles.adress}>
                 <Text style={Styles.titulo}>Add address</Text>
                 <TouchableOpacity>
-                    <Icon name="location-pin" size={15} style={Styles.bag}/>
+                    <Icon name="location-pin" size={18} style={Styles.bag}/>
                 </TouchableOpacity>
             </View>
 
