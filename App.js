@@ -31,9 +31,9 @@ const App = () => {
             iconName="md-search-outline"
           />
           <QrCode />
-          <HotSales />
-          <BestSeller /> */}
-          <Card />
+          <HotSales /> */}
+          <BestSeller />
+          {/* <Card /> */}
         </View>
       </ScrollView>
     </SafeAreaView>

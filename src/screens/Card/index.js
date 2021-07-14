@@ -3,7 +3,7 @@ import React from 'react';
 import {
   View,
   Text,
-  // ScrollView,
+  ScrollView,
   Alert,
   Image,
 } from 'react-native';
@@ -22,31 +22,102 @@ export default function Card() {
       </View>
       <View style={styles.cardItemsWrapper}>
         {/* Itens */}
-        {/* <ScrollView> */}
         <View style={styles.itens}>
-          <View style={styles.imagemWrapper}>
-            <Image source={require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png')} style={styles.imagem} />
-          </View>
-          <View style={styles.textoItem}>
-            <Text style={styles.textoItemTitulo}>Galaxy Note 20 Ultra</Text>
-            <Text style={styles.textoItemPreco}>$3000.00</Text>
-          </View>
-          <View style={styles.btnQuantidade}>
-            <Button
-              titulo="-"
-              buttonStyles={styles.buttonQuantidade}
-              tituloStyles={styles.tituloQuantidade}
-              onPress={() => Alert.alert('diminui')} />
-            <Text style={styles.textoQuantidade}>2</Text>
-            <Button
-              titulo="+"
-              buttonStyles={styles.buttonQuantidade}
-              tituloStyles={styles.tituloQuantidade}
-              onPress={() => Alert.alert('aumenta')} />
-          </View>
-          <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')}/>
+          <ScrollView>
+            <View style={styles.itemUnico}>
+              <View style={styles.imagemWrapper}>
+                <Image source={require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png')} style={styles.imagem} />
+              </View>
+              <View style={styles.textoItem}>
+                <Text style={styles.textoItemTitulo}>Galaxy Note 20 Ultra</Text>
+                <Text style={styles.textoItemPreco}>$3000.00</Text>
+              </View>
+              <View style={styles.btnQuantidade}>
+                <Button
+                  titulo="-"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('diminui')} />
+                <Text style={styles.textoQuantidade}>2</Text>
+                <Button
+                  titulo="+"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('aumenta')} />
+              </View>
+              <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
+            </View>
+            <View style={styles.itemUnico}>
+              <View style={styles.imagemWrapper}>
+                <Image source={require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png')} style={styles.imagem} />
+              </View>
+              <View style={styles.textoItem}>
+                <Text style={styles.textoItemTitulo}>Galaxy Note 20 Ultra</Text>
+                <Text style={styles.textoItemPreco}>$3000.00</Text>
+              </View>
+              <View style={styles.btnQuantidade}>
+                <Button
+                  titulo="-"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('diminui')} />
+                <Text style={styles.textoQuantidade}>2</Text>
+                <Button
+                  titulo="+"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('aumenta')} />
+              </View>
+              <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
+            </View>
+            <View style={styles.itemUnico}>
+              <View style={styles.imagemWrapper}>
+                <Image source={require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png')} style={styles.imagem} />
+              </View>
+              <View style={styles.textoItem}>
+                <Text style={styles.textoItemTitulo}>Galaxy Note 20 Ultra</Text>
+                <Text style={styles.textoItemPreco}>$3000.00</Text>
+              </View>
+              <View style={styles.btnQuantidade}>
+                <Button
+                  titulo="-"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('diminui')} />
+                <Text style={styles.textoQuantidade}>2</Text>
+                <Button
+                  titulo="+"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('aumenta')} />
+              </View>
+              <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
+            </View>
+            <View style={styles.itemUnico}>
+              <View style={styles.imagemWrapper}>
+                <Image source={require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png')} style={styles.imagem} />
+              </View>
+              <View style={styles.textoItem}>
+                <Text style={styles.textoItemTitulo}>Galaxy Note 20 Ultra</Text>
+                <Text style={styles.textoItemPreco}>$3000.00</Text>
+              </View>
+              <View style={styles.btnQuantidade}>
+                <Button
+                  titulo="-"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('diminui')} />
+                <Text style={styles.textoQuantidade}>2</Text>
+                <Button
+                  titulo="+"
+                  buttonStyles={styles.buttonQuantidade}
+                  tituloStyles={styles.tituloQuantidade}
+                  onPress={() => Alert.alert('aumenta')} />
+              </View>
+              <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
+            </View>
+          </ScrollView>
         </View>
-        {/* </ScrollView> */}
         <View style={styles.hr} />
         {/* Total */}
         <View style={styles.preco}>

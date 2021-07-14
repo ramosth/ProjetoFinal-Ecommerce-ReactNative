@@ -31,7 +31,11 @@ export const styles = StyleSheet.create({
   },
   itens: {
     height: windowHeigth * 0.5,
+    // flexDirection: 'row',
+  },
+  itemUnico: {
     flexDirection: 'row',
+    marginBottom: 40,
   },
   hr: {
     borderColor: colors.cinza,
