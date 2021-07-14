@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import CardProduto from './CardProduto';
-import style from './style'
+import style from './style';
 
 const BestSeller = () => {
     return (

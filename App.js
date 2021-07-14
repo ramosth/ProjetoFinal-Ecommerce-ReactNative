@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
-import BestSeller from './src/Components/BestSeller';
+// import BestSeller from './src/Components/BestSeller';
 // import Header from './src/Components/Header/Header';
 // import HeaderTwo from './src/Components/HeaderTwo/HeaderTwo';
 // import HeaderTree from './src/Components/HeaderTree/HeaderTree';
@@ -10,6 +10,7 @@ import BestSeller from './src/Components/BestSeller';
 // import HotSales from './src/Components/HotSales';
 // import QrCode from './src/Components/QrCode';
 // import Card from './src/screens/Card';
+import { Home } from './src/screens/Home';
 
 const App = () => {
 
@@ -32,7 +33,7 @@ const App = () => {
           />
           <QrCode />
           <HotSales /> */}
-          <BestSeller />
+          <Home />
           {/* <Card /> */}
         </View>
       </ScrollView>
