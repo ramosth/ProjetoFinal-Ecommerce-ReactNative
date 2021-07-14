@@ -10,7 +10,8 @@ import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
 // import HotSales from './src/Components/HotSales';
 // import QrCode from './src/Components/QrCode';
 // import Card from './src/screens/Card';
-import { Home } from './src/screens/Home';
+// import { Home } from './src/screens/Home';
+import { Details } from './src/screens/Details';
 
 const App = () => {
 
@@ -33,7 +34,7 @@ const App = () => {
           />
           <QrCode />
           <HotSales /> */}
-          <Home />
+          <Details />
           {/* <Card /> */}
         </View>
       </ScrollView>

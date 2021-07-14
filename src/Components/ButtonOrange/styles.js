@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   botao: {
     backgroundColor: '#FF6E4E',
-    width: 355,
+    width: 325,
     height: 54,
     borderRadius: 10,
     flexDirection: 'row',
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   texto: {
-    fontSize: 20,
+    fontSize: 16,
     color: '#fff',
     fontFamily: 'Montserrat-Bold',
   },
