@@ -6,13 +6,14 @@ import Styles from '../HeaderTwo/Styles';
 const HeaderTwo = ({nav}) => {
   return (
     <View style={Styles.topo}>
+      {/* <TouchableOpacity onPress={() => navigation.goBack()}> */}
       <TouchableOpacity onPress={nav}>
         <Icon name="arrow-left" style={Styles.setaRetorno} />
       </TouchableOpacity>
 
       <Text style={Styles.titulo}>Product Details</Text>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={nav}>
         <Icon name="handbag" style={Styles.bag} />
       </TouchableOpacity>
     </View>
