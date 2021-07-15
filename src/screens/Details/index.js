@@ -4,11 +4,11 @@ import HeaderTwo from '../../Components/HeaderTwo/HeaderTwo';
 import CardFoto from '../../Components/CardFotoProduto';
 import CardDetalhes from '../../Components/CardDetalhes';
 
-const Details = ({navigation}) => {
+const Details = props => {
   return (
     <ScrollView>
       <View>
-        <HeaderTwo />
+        <HeaderTwo nav={() => props.navigation.navigate('Home')} />
         <CardFoto />
         <CardDetalhes />
       </View>
