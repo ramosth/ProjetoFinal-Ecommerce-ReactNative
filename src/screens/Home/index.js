@@ -8,7 +8,7 @@ import HotSales from '../../Components/HotSales';
 import QrCode from '../../Components/QrCode';
 import BestSeller from '../../Components/BestSeller';
 
-const Home = props => {
+const Home = ({navigation}) => {
   const [input, setInput] = useState('');
   return (
     <ScrollView>
@@ -26,7 +26,7 @@ const Home = props => {
         </View>
         <View>
           <HotSales />
-          <BestSeller nav={() => props.navigation.navigate('Details')} />
+          <BestSeller navigation={navigation} />
         </View>
       </View>
     </ScrollView>
