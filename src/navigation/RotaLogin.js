@@ -11,6 +11,7 @@ import Details from '../screens/Details';
 import Home from '../screens/Home';
 import Card from '../screens/Card';
 import Profile from '../screens/Profile';
+import Produtos from '../screens/Produtos';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -26,7 +27,7 @@ const TabNavigator = () => {
         },
         activeTintColor: colors.laranja,
         inactiveTintColor: colors.cinza,
-        showLabel: false, //deixa de exibir o nome na bottomTab
+        showLabel: true, //deixa de exibir o nome na bottomTab
       }}>
       <Tab.Screen
         name="Home"
@@ -34,6 +35,15 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: ({ color }) => (
             <Entypo name="home" size={30} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Produtos"
+        component={Produtos}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Entypo name="list" size={32} color={color} />
           ),
         }}
       />
