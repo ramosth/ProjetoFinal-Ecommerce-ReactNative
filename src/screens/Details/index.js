@@ -8,7 +8,7 @@ const Details = props => {
   return (
     <ScrollView>
       <View>
-        <HeaderTwo nav={() => props.navigation.navigate('Home')} />
+        <HeaderTwo navProdutos={() => props.navigation.navigate('Produtos')} navCard={() => props.navigation.navigate('Card')}/>
         <CardFoto />
         <CardDetalhes />
       </View>

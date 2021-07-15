@@ -14,7 +14,7 @@ import Button from '../../Components/Button';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../assets/colors/colors';
 
-export default function Card() {
+export default function Card(props) {
   const [contador, setContador] = useState(1);
   const incremento = () => setContador(contador => contador + 1)
   const decremento = () => setContador(contador=> contador - 1)
@@ -22,7 +22,7 @@ export default function Card() {
   return (
     <View style={styles.container}>
       <View style={styles.titleWrapper}>
-        <HeaderTree />
+        <HeaderTree navProdutos={() => props.navigation.navigate('Produtos')}/>
         <Text style={styles.title}>My Cart</Text>
       </View>
       <View style={styles.cardItemsWrapper}>

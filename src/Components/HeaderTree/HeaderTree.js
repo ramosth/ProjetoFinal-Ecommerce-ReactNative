@@ -3,10 +3,10 @@ import {Text, View, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 import Styles from './Styles';
 
-const HeaderTree = () => {
+const HeaderTree = ({navProdutos}) => {
     return (
         <View style={Styles.topo}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={navProdutos}>
                 <Icon name="arrow-left" size={15} style={Styles.setaRetorno}/>
             </TouchableOpacity>
             

@@ -39,7 +39,7 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Produtos"
+        name="Products"
         component={Produtos}
         options={{
           tabBarIcon: ({ color }) => (
@@ -76,6 +76,8 @@ export default function RotaLogin() {
       screenOptions={{ headerShown: false }}>
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
       <Stack.Screen name="Details" component={Details} />
+      <Stack.Screen name="Produtos" component={Produtos} />
+      <Stack.Screen name="Card" component={Card} />
     </Stack.Navigator>
   );
 }

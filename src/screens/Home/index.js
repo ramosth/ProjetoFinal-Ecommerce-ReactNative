@@ -6,7 +6,7 @@ import SelectCategory from '../../Components/SelectCategory';
 import Pesquisa from '../../Components/InputText';
 import HotSales from '../../Components/HotSales';
 import QrCode from '../../Components/QrCode';
-import BestSeller from '../../Components/BestSeller';
+
 
 const Home = ({navigation}) => {
   const [input, setInput] = useState('');
@@ -26,7 +26,6 @@ const Home = ({navigation}) => {
         </View>
         <View>
           <HotSales />
-          <BestSeller navigation={navigation} />
         </View>
       </View>
     </ScrollView>

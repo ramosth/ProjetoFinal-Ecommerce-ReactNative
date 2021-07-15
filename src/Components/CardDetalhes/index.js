@@ -11,7 +11,7 @@ const CardDetalhes = ({route, navigation}) => {
   const [coracao, setCoracao] = useState(false);
   const [produto, setProduto] = useState([]);
 
-  const {item} = route.params;
+  // const {item} = route.params;
 
   useEffect(() => {
     const obterProdutoAxios = async () => {

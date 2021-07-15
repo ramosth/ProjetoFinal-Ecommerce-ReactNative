@@ -5,11 +5,19 @@ import {
   Text,
 } from 'react-native';
 import { styles } from './styles';
+import BestSeller from '../../Components/BestSeller';
+import RotaLogin from '../../navigation/RotaLogin';
+import HeaderTree from '../../Components/HeaderTree/HeaderTree';
 
-export default function Produtos({ navigation }) {
+const Produtos = ({ navigation}) => {
   return (
   <View>
-    <Text style={styles.texto}>Produtos</Text>
+    <HeaderTree navProdutos={() => navigation.goBack()}/>
+    <Text style={styles.texto}>Products</Text>
+    <BestSeller navigation={navigation}/>
+    <RotaLogin/>
   </View>
   );
 }
+
+export default Produtos;
