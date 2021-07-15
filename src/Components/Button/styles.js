@@ -4,15 +4,20 @@ import colors from '../../assets/colors/colors';
 
 export const styles = StyleSheet.create({
   container: {
-    // paddingVertical: 15,
     backgroundColor: colors.laranja,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 20,
   },
   titulo: {
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: 'Montserrat-Regular',
     fontSize: 20,
     color: colors.branco,
+    paddingHorizontal: 20,
+  },
+  iconImage: {
+    backgroundColor: colors.branco,
+    borderRadius: 10,
+    paddingVertical: 5,
   },
 });
