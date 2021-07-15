@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginLeft: 17,
-    marginTop: 18,
-    marginBottom: 24,
+    marginTop: 25,
+    marginBottom: 10,
   },
   titlesTitleCategoria: {
     fontFamily: 'Montserrat-Bold',

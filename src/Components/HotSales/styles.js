@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
   titlesSubTitle: {
     fontFamily: 'Montserrat-Regular',
     fontSize: 15,
-    marginRight: 33,
+    marginRight: 23,
     color: colors.laranja,
   },
   card: {

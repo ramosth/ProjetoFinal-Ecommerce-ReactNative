@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   titleWrapper: {
-    height: windowHeigth * 0.22,
+    height: windowHeigth * 0.18,
     paddingHorizontal: 15,
     paddingTop: 10,
   },
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     color: colors.azul,
     marginLeft: 16,
     marginTop: 30,
-    marginBottom: 20,
+    // marginBottom: 10,
   },
   cardItemsWrapper: {
     flex: 1,
@@ -46,8 +46,8 @@ export const styles = StyleSheet.create({
     height: windowHeigth * 0.10,
   },
   totalWrapper: {
-    marginLeft: 55,
-    marginRight: 35,
+    marginHorizontal: 40,
+    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -55,19 +55,18 @@ export const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Regular',
     fontSize: 15,
     color: colors.branco,
-    marginTop: 5,
+    marginVertical: 8,
   },
   totalValor: {
     fontFamily: 'Montserrat-SemiBold',
     fontSize: 15,
     color: colors.branco,
-    marginTop: 5,
   },
   botao: {
     flex: 1,
     height: windowHeigth * 0.35,
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 20,
   },
   buttonCheckout: {
     width: 330,
@@ -107,6 +106,9 @@ export const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Medium',
     fontSize: 25,
     color: colors.branco,
+  },
+  tituloDisable: {
+    opacity: 0.3,
   },
   btnQuantidade: {
     backgroundColor: colors.cinzaChumbo,

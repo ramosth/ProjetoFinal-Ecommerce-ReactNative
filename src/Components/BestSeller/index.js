@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {TouchableOpacity, View, Text} from 'react-native';
+import { TouchableOpacity, View, Text } from 'react-native';
 import CardProduto from './CardProduto';
 import style from './style';
 
-const BestSeller = ({nav}) => {
+const BestSeller = ({ nav }) => {
     return (
         <View style={style.container}>
             <View style={style.titulos}>
@@ -13,15 +14,10 @@ const BestSeller = ({nav}) => {
                 </TouchableOpacity>
             </View>
             <View style={style.row}>
-                <CardProduto nav={nav}/>
-                <CardProduto nav={nav}/>
-            </View>
-            <View style={style.row}>
-                <CardProduto nav={nav}/>
-                <CardProduto nav={nav}/>
+                <CardProduto nav={nav} />
             </View>
         </View>
-    )
-}
+    );
+};
 
 export default BestSeller;

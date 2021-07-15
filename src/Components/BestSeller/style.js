@@ -11,19 +11,20 @@ const style = StyleSheet.create({
     marginTop: '5%',
   },
   title: {
+    fontFamily: 'Montserrat-Bold',
     fontSize: 25,
-    fontWeight: '700',
     color: colors.azul,
   },
   seeMore: {
-    color: colors.laranja,
+    fontFamily: 'Montserrat-Regular',
     fontSize: 15,
+    color: colors.laranja,
   },
   titulos: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: '5%',
-    alignItems: 'baseline',
+    alignItems: 'center',
   },
 });
 

@@ -4,9 +4,10 @@ import colors from '../../../assets/colors/colors';
 const style = StyleSheet.create({
   card: {
     width: 170,
-    height: 225,
+    height: 230,
     borderRadius: 10,
     backgroundColor: '#FFF',
+    paddingVertical: 15,
   },
   containerPreco: {
     flexDirection: 'row',
@@ -30,7 +31,9 @@ const style = StyleSheet.create({
     color: colors.azul,
   },
   imagem: {
-    width: 170,
+    marginHorizontal: 25,
+    width: 120,
+    height: 160,
     borderRadius: 10,
   },
   margem: {

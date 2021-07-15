@@ -3,10 +3,10 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import Styles from '../HeaderTwo/Styles';
 
-const HeaderTwo = () => {
+const HeaderTwo = ({navigation}) => {
   return (
     <View style={Styles.topo}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <Icon name="arrow-left" style={Styles.setaRetorno} />
       </TouchableOpacity>
 

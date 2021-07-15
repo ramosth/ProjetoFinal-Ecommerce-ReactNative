@@ -1,32 +1,61 @@
-import React from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React, { useEffect, useState } from 'react';
+import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native';
 import style from './style';
 import Icon from 'react-native-vector-icons/EvilIcons';
+// import produtosData from '../../../assets/data/produtsData';
+import { api } from '../../../services/Api/api';
 
-const CardProduto = ({nav}) => {
+const CardProduto = ({ nav }) => {
+
+    const [produtos, setProdutos] = useState([]);
+
+    useEffect(() => {
+        const obterProdutoAxios = async () => {
+            try {
+                const response = await api.get('/produtos');
+                setProdutos(response.data);
+            } catch (error) {
+                console.log('Response: ', error);
+            }
+        };
+        obterProdutoAxios();
+    }, []);
+
+    const renderPopularItem = ({ item }) => {
+        return (
+            <TouchableOpacity onPress={nav} style={{ width: '50%', marginBottom: 15, alignItems: 'center' }}>
+                <View style={style.card}>
+                    <Image style={style.imagem} source={{uri: item.imagem}} />
+                    <TouchableOpacity style={style.favorito} >
+                        <Icon style={style.icone} name="heart" size={20} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={style.margem}>
+                        <View style={style.containerPreco}>
+                            <Text style={style.price}>R${item.preco}</Text>
+                            <Text style={style.priceRiscado}>R${item.priceSale}</Text>
+                        </View>
+                        <Text style={style.nomeProduto}>{item.name}</Text>
+                    </TouchableOpacity>
+                </View>
+            </TouchableOpacity>
+        );
+    };
 
     return (
         <View>
-        <View style={style.card}>
-            <TouchableOpacity onPress={nav}>
-                <Image style={style.imagem} source={require('../../../assets/images/Samsung-Galaxy-S20-Ultra-Preto.png')} />
-            <TouchableOpacity style={style.favorito} >
-                <Icon style={style.icone} name="heart" size={20}/>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.margem}>
-                <View style={style.containerPreco}>
-                    <Text style={style.price}>R$1999</Text>
-                    <Text style={style.priceRiscado}>R$2500</Text>
-                </View>
-                <Text style={style.nomeProduto}>Samsung Galaxy s20 Ultra</Text>
-            </TouchableOpacity>
-            </TouchableOpacity>
+            <FlatList
+                columnWrapperStyle={{ justifyContent: 'space-between' }}
+                numColumns={2}
+                data={produtos}
+                renderItem={renderPopularItem}
+                keyExtractor={item => item.id}
+                horizontal={false}
+                showsHorizontalScrollIndicator={false}
+            />
         </View>
-        <TouchableOpacity>
-        <Text style={style.nomeProduto}>Samsung Galaxy s20 Ultra</Text>
-      </TouchableOpacity>
-    </View>
-  );
+    );
 };
 
 export default CardProduto;
