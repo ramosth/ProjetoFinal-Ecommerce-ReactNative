@@ -8,7 +8,7 @@ const Details = ({navigation}) => {
   return (
     <ScrollView>
       <View>
-        <HeaderTwo />
+        <HeaderTwo nav={() => navigation.navigate('Home')}/>
         <CardFoto />
         <CardDetalhes />
       </View>
