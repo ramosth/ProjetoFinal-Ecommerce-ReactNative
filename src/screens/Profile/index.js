@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, ScrollView, Text, Image} from 'react-native';
-import style from './style';
+import style from './Style';
 import Button from '../../Components/Button';
 
 const Profile = props => {
