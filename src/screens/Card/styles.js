@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import colors from '../../assets/colors/colors';
-import { windowHeigth } from '../../assets/helpers/dimensions';
+import {windowHeigth} from '../../assets/helpers/dimensions';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,27 +10,25 @@ export const styles = StyleSheet.create({
   titleWrapper: {
     height: windowHeigth * 0.18,
     paddingHorizontal: 15,
-    paddingTop: 10,
   },
   title: {
     fontFamily: 'Montserrat-Bold',
     fontSize: 35,
     color: colors.azul,
     marginLeft: 16,
-    marginTop: 30,
+    marginTop: 20,
     // marginBottom: 10,
   },
   cardItemsWrapper: {
     flex: 1,
-    height: windowHeigth * 0.742,
+    height: windowHeigth * 0.745,
     backgroundColor: colors.azul,
     paddingTop: 20,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-
   },
   itens: {
-    height: windowHeigth * 0.5,
+    height: windowHeigth * 0.45,
     // flexDirection: 'row',
   },
   itemUnico: {
@@ -43,13 +41,14 @@ export const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   preco: {
-    height: windowHeigth * 0.10,
+    height: windowHeigth * 0.1,
   },
   totalWrapper: {
     marginHorizontal: 40,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    bottom: 5,
   },
   totalTexto: {
     fontFamily: 'Montserrat-Regular',
@@ -66,7 +65,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: windowHeigth * 0.35,
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   buttonCheckout: {
     width: 330,

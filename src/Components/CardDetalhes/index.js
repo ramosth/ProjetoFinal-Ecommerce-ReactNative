@@ -1,13 +1,30 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import colors from '../../assets/colors/colors';
 import ButtonOrange from '../ButtonOrange';
 import Stars from '../Stars';
 import styles from './styles';
+import {api} from '../../../src/services/Api/api';
 
-const CardDetalhes = props => {
+const CardDetalhes = ({route, navigation}) => {
   const [coracao, setCoracao] = useState(false);
+  const [produto, setProduto] = useState([]);
+
+  const {item} = route.params;
+
+  useEffect(() => {
+    const obterProdutoAxios = async () => {
+      try {
+        const response = await api.get(`/produtos/${item}`);
+        setProduto(response.data);
+      } catch (error) {
+        console.log('Response: ', error);
+      }
+    };
+    obterProdutoAxios();
+  }, []);
+
   return (
     <View style={styles.container}>
       <View style={styles.card}>

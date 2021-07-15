@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     alignItems: 'center',
     elevation: 6,
-
   },
   linha1: {
     flexDirection: 'row',

@@ -16,6 +16,8 @@ import colors from '../../assets/colors/colors';
 
 export default function Card() {
   const [contador, setContador] = useState(1);
+  const incremento = () => setContador(contador => contador + 1)
+  const decremento = () => setContador(contador=> contador - 1)
 
   return (
     <View style={styles.container}>
@@ -40,7 +42,7 @@ export default function Card() {
                   titulo="-"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => setContador(contador - 1)}
+                  onPress={decremento}
                   disabled={contador === 0 ? true : false}
                   tituloStyles={contador <= 0 ? styles.tituloDisable : {color: colors.branco}} />
                 <Text style={styles.textoQuantidade}>{contador}</Text>
@@ -48,7 +50,7 @@ export default function Card() {
                   titulo="+"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => setContador(contador + 1)} />
+                  onPress={incremento} />
               </View>
               <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
             </View>
@@ -66,13 +68,13 @@ export default function Card() {
                   titulo="-"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => Alert.alert('diminui')} />
+                  onPress={decremento} />
                 <Text style={styles.textoQuantidade}>2</Text>
                 <Button
                   titulo="+"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => Alert.alert('aumenta')} />
+                  onPress={incremento} />
               </View>
               <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
             </View>
@@ -90,13 +92,13 @@ export default function Card() {
                   titulo="-"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => Alert.alert('diminui')} />
+                  onPress={decremento} />
                 <Text style={styles.textoQuantidade}>2</Text>
                 <Button
                   titulo="+"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => Alert.alert('aumenta')} />
+                  onPress={incremento} />
               </View>
               <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
             </View>
@@ -114,13 +116,13 @@ export default function Card() {
                   titulo="-"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => Alert.alert('diminui')} />
+                  onPress={decremento} />
                 <Text style={styles.textoQuantidade}>2</Text>
                 <Button
                   titulo="+"
                   buttonStyles={styles.buttonQuantidade}
                   tituloStyles={styles.tituloQuantidade}
-                  onPress={() => Alert.alert('aumenta')} />
+                  onPress={incremento} />
               </View>
               <Ionicons name="md-trash-outline" size={28} color={colors.cinzaChumbo} style={styles.icone} onPress={() => Alert.alert('excluir item')} />
             </View>
