@@ -25,8 +25,8 @@ const Home = props => {
           <QrCode />
         </View>
         <View>
-            <HotSales />
-            <BestSeller nav={() => props.navigation.navigate('Details')} />
+          <HotSales />
+          <BestSeller nav={() => props.navigation.navigate('Details')} />
         </View>
       </View>
     </ScrollView>

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import colors from '../../assets/colors/colors';
-import { windowHeigth } from '../../assets/helpers/dimensions';
+import {windowHeigth} from '../../assets/helpers/dimensions';
 
 export const styles = StyleSheet.create({
   container: {
@@ -27,7 +27,6 @@ export const styles = StyleSheet.create({
     paddingTop: 20,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-
   },
   itens: {
     height: windowHeigth * 0.5,
@@ -43,7 +42,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   preco: {
-    height: windowHeigth * 0.10,
+    height: windowHeigth * 0.1,
   },
   totalWrapper: {
     marginHorizontal: 40,

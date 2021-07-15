@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import Styles from '../HeaderTwo/Styles';
 
-const HeaderTwo = ({navigation}) => {
+const HeaderTwo = ({nav}) => {
   return (
     <View style={Styles.topo}>
       {/* <TouchableOpacity onPress={() => navigation.goBack()}> */}

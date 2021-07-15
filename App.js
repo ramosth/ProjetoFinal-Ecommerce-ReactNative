@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import 'react-native-gesture-handler';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -12,7 +12,7 @@ import Home from './src/screens/Home';
 import Details from './src/screens/Details';
 import Card from './src/screens/Card';
 import Profile from './src/screens/Profile';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
