@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export default function RotaAutentication() {
   return (
     <Stack.Navigator
-      initialRouteName="Cadastro"
+      initialRouteName="Login"
       screenOptions={{ headerShown: false }}>
       <Stack.Screen name="CreateAccount" component={Cadastro} />
       <Stack.Screen name="Login" component={Login} />

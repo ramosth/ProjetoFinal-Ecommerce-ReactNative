@@ -66,7 +66,6 @@ export default function RotaLogin() {
       screenOptions={{ headerShown: false }}>
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
       <Stack.Screen name="Details" component={Details} />
-      <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
   );
 }
