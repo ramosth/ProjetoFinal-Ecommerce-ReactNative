@@ -5,7 +5,7 @@ import Style from './Style';
 import CardFoto from '../../Components/CardFotoProduto';
 import CardDetalhes from '../../Components/CardDetalhes';
 
-export const Details = () => {
+const Details = () => {
   return (
     <ScrollView>
       <View>
@@ -16,3 +16,5 @@ export const Details = () => {
     </ScrollView>
   );
 };
+
+export default Details;

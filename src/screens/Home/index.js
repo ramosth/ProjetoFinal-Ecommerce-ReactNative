@@ -26,7 +26,7 @@ const Home = ({navigation}) => {
         </View>
         <View>
             <HotSales />
-            <BestSeller nav={navigation} />
+            <BestSeller nav={() => navigation.navigate('Details')} />
         </View>
       </View>
     </ScrollView>

@@ -3,7 +3,7 @@ import {TouchableOpacity, View, Text} from 'react-native';
 import CardProduto from './CardProduto';
 import style from './style';
 
-const BestSeller = ({navigation}) => {
+const BestSeller = ({nav}) => {
     return (
         <View style={style.container}>
             <View style={style.titulos}>
@@ -13,12 +13,12 @@ const BestSeller = ({navigation}) => {
                 </TouchableOpacity>
             </View>
             <View style={style.row}>
-                <CardProduto nav={navigation}/>
-                <CardProduto nav={navigation}/>
+                <CardProduto nav={nav}/>
+                <CardProduto nav={nav}/>
             </View>
             <View style={style.row}>
-                <CardProduto nav={navigation}/>
-                <CardProduto nav={navigation}/>
+                <CardProduto nav={nav}/>
+                <CardProduto nav={nav}/>
             </View>
         </View>
     )
