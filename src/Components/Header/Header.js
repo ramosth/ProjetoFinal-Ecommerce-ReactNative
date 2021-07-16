@@ -23,16 +23,6 @@ const Header = () => {
 
     return (
         <View style={Styles.barraTopo}>
-            <View style={Styles.topo}>
-                {/* <TouchableOpacity>
-                    <Icon name="md-location-outline" size={18} style={Styles.location} />
-                </TouchableOpacity>
-                <Text style={Styles.tituloLocal}>Zihuatanejo, Gro</Text>
-                <TouchableOpacity>
-                    <Seta name="keyboard-arrow-down" size={18} style={Styles.seta} />
-                </TouchableOpacity> */}
-            </View>
-
             <TouchableOpacity>
                 <Text style={Styles.filter}>Olá, <Text style={Styles.filterNome}>{nome}</Text></Text>
             </TouchableOpacity>

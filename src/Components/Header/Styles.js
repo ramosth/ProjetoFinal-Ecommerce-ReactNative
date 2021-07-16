@@ -1,13 +1,14 @@
 /* eslint-disable prettier/prettier */
 import { StyleSheet } from 'react-native';
+import colors from '../../assets/colors/colors';
 import color from '../../assets/colors/colors';
 
 const Styles = StyleSheet.create({
     barraTopo: {
         top: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingHorizontal: '5%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     tituloLocal: {
         color: color.azul,
