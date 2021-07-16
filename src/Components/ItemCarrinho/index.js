@@ -4,7 +4,7 @@ import colors from '../../assets/colors/colors';
 import {styles} from './styles';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import api from '../../services/Api/api';
+import {api} from '../../services/Api/api';
 
 export default function ItemCarrinho(props) {
   const [contador, setContador] = useState(1);

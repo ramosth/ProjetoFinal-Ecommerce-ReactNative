@@ -16,6 +16,9 @@ export default function Card(props) {
       try {
         const response = await api.get('/carrinho');
         setProdutos(response.data);
+        response.data.map(item =>
+          setPrecoTotal(valor => valor + parseFloat(item.preco)),
+        );
       } catch (error) {
         console.log('Response: ', error);
       }
@@ -53,7 +56,7 @@ export default function Card(props) {
         <View style={styles.preco}>
           <View style={styles.totalWrapper}>
             <Text style={styles.totalTexto}>Total</Text>
-            <Text style={styles.totalValor}>{precoTotal}</Text>
+            <Text style={styles.totalValor}>{precoTotal.toFixed(2)}</Text>
           </View>
           <View style={styles.totalWrapper}>
             <Text style={styles.totalTexto}>Delivery</Text>

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {View, Image, ScrollView, Text, Alert} from 'react-native';
 import {styles} from './styles';
 import InputText from '../../Components/InputText';
@@ -32,15 +32,19 @@ export default function Login({navigation}) {
     }
   };
 
-  const setarSenha = async value => {
-    const dadoSalvo = await AsyncStorage.getItem('LembrarSenha');
-    const convertido = JSON.parse(dadoSalvo);
-    setEmail(value);
-    if (value === convertido.email) {
-      setSenha(convertido.senha);
-    }
-    console.log(dadoSalvo);
-  };
+  useEffect(() => {
+    const setarSenha = async () => {
+      const dadoSalvo = await AsyncStorage.getItem('LembrarSenha');
+      if (dadoSalvo) {
+        const convertido = JSON.parse(dadoSalvo);
+        if (email === convertido.email) {
+          setSenha(convertido.senha);
+        }
+      }
+      console.log(dadoSalvo);
+    };
+    setarSenha();
+  }, [email]);
 
   return (
     <View style={styles.container}>
@@ -57,7 +61,7 @@ export default function Login({navigation}) {
             <Text style={styles.inputItemTitle}>Email</Text>
             <InputText
               value={email}
-              onChangeText={value => setarSenha(value)}
+              onChangeText={setEmail}
               placeholder="Digite o email"
               iconName="mail-outline"
             />
