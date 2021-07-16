@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   View,
   Image,
@@ -11,24 +11,43 @@ import { styles } from './styles';
 import InputText from '../../Components/InputText';
 import Button from '../../Components/Button';
 import { UsuarioLogado } from '../../contexto/contextUsuario';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Login({ navigation }) {
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
   // ACESSANDO O CONTEXTO
-  const { usuario, login } = useContext(UsuarioLogado);
-  console.log('usuario => ', usuario);
+  const { login } = useContext(UsuarioLogado);
 
-  const chamaLogin = () => {
+  const chamaLogin = async () => {
+    const nomeSalvo = await AsyncStorage.getItem('NomeCadastro');
+    const emailSalvo = await AsyncStorage.getItem('EmailCadastro');
+    const senhaSalvo = await AsyncStorage.getItem('SenhaCadastro');
+
     const usuarioCadastrado = {
       id: '1',
-      nome: 'Mário',
-      email: 'mario@gmail.com',
-      idade: 42,
-      premium: true,
+      nome: nomeSalvo,
+      email: emailSalvo,
+      senha: senhaSalvo,
     };
-    login(usuarioCadastrado);
+
+    if (email === emailSalvo && senha === senhaSalvo) {
+      login(usuarioCadastrado);
+    } else {
+      Alert.alert('usuario não cadastrado');
+    }
+  };
+
+  const setarSenha = async (value) => {
+    const dadoSalvo = await AsyncStorage.getItem('LembrarSenha');
+    const convertido = JSON.parse(dadoSalvo);
+    setEmail(value);
+    if (value === convertido.email) {
+      setSenha(convertido.senha);
+    }
+    console.log(dadoSalvo);
   };
 
   return (
@@ -38,9 +57,9 @@ export default function Login({ navigation }) {
         <View style={styles.titlesWrapper}>
           <Text style={styles.titlesSubtitle}>Login</Text>
           <Image
-        source={require('../../assets/images/logo.png')}
-        style={styles.logo}
-      />
+            source={require('../../assets/images/logo.png')}
+            style={styles.logo}
+          />
         </View>
         {/* Inputs */}
         <View style={styles.inputsWrapper}>
@@ -48,7 +67,7 @@ export default function Login({ navigation }) {
             <Text style={styles.inputItemTitle}>Email</Text>
             <InputText
               value={email}
-              onChangeText={setEmail}
+              onChangeText={(value) => setarSenha(value)}
               placeholder="Digite o email"
               iconName="mail-outline"
             />
@@ -75,7 +94,7 @@ export default function Login({ navigation }) {
             titulo="Entre com o Google"
             buttonStyles={styles.buttonStyles}
             tituloStyles={styles.tituloStyles}
-            onPress={() => Alert.alert('Login pelo Gmail')}/>
+            onPress={() => Alert.alert('Login pelo Gmail')} />
         </View>
         <View style={styles.buttonCreate}>
           <Button
