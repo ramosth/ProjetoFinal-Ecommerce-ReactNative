@@ -19,7 +19,6 @@ const Profile = props => {
       const nomeSalvo = await AsyncStorage.getItem('NomeCadastro');
       if (nomeSalvo) {
         setNome(nomeSalvo);
-        console.log('nome', nomeSalvo);
       }
     };
 
@@ -27,7 +26,6 @@ const Profile = props => {
       const emailSalvo = await AsyncStorage.getItem('EmailCadastro');
       if (emailSalvo) {
         setEmail(emailSalvo);
-        console.log('email', emailSalvo);
       }
     };
 
@@ -35,7 +33,6 @@ const Profile = props => {
       const senhaSalvo = await AsyncStorage.getItem('SenhaCadastro');
       if (senhaSalvo) {
         setSenha(senhaSalvo);
-        console.log('senha', senhaSalvo);
       }
     };
 

@@ -25,6 +25,10 @@ export default function Cadastro({navigation}) {
     chamaLogin();
   };
 
+  const lembrarSenha = () => {
+    AsyncStorage.setItem('LembrarSenha', JSON.stringify({ email: email, senha: senha }));
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -69,7 +73,7 @@ export default function Cadastro({navigation}) {
               titulo="Lembrar senha"
               buttonStyles={[styles.buttonLembrarSenha]}
               tituloStyles={[styles.tituloLembrarSenha]}
-              onPress={() => Alert.alert('lembrar senha')}
+              onPress={() => lembrarSenha()}
             />
           </View>
           <View style={styles.inputItemWrapper}>
