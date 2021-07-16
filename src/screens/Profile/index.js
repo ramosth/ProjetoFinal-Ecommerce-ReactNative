@@ -3,7 +3,7 @@ import React from 'react';
 import {View, ScrollView, Text, Image} from 'react-native';
 import Button from '../../Components/Button';
 import { UsuarioLogado } from '../../contexto/contextUsuario';
-import style from './style';
+import style from './Style';
 
 const Profile = props => {
   const {usuario, logout} = React.useContext(UsuarioLogado);
