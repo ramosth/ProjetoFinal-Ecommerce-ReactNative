@@ -1,19 +1,11 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {
-  View,
-  SafeAreaView,
-  Image,
-  StyleSheet,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
+import {View, Image, ScrollView, Text, Alert} from 'react-native';
+// eslint-disable-next-line prettier/prettier
 import {styles} from './styles';
 import InputText from '../../Components/InputText';
 import Button from '../../Components/Button';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Cadastro({navigation}) {
   const [nome, setNome] = useState('');
@@ -24,6 +16,13 @@ export default function Cadastro({navigation}) {
   const chamaLogin = () => {
     Alert.alert('Cadastro Efetuado', 'Usuário registrado com sucesso!');
     navigation.navigate('Login');
+  };
+
+  const cadastrarUsuario = () => {
+    AsyncStorage.setItem('NomeCadastro', nome);
+    AsyncStorage.setItem('EmailCadastro', email);
+    AsyncStorage.setItem('SenhaCadastro', senha);
+    chamaLogin();
   };
 
   return (
@@ -97,7 +96,7 @@ export default function Cadastro({navigation}) {
             titulo="Cadastrar conta"
             tituloStyles={styles.tituloStyles}
             buttonStyles={[styles.buttonStyles]}
-            onPress={() => chamaLogin()}
+            onPress={() => cadastrarUsuario()}
           />
         </View>
       </ScrollView>
