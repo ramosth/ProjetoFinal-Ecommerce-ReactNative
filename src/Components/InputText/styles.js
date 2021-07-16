@@ -3,11 +3,10 @@ import colors from '../../assets/colors/colors';
 
 export const styles = StyleSheet.create({
   container: {
-    borderRadius: 50,
+    borderRadius: 10,
     paddingHorizontal: 24,
     backgroundColor: colors.branco,
-    width: 250,
-    marginLeft: 32,
+    width: 330,
     flexDirection: 'row',
     alignItems: 'center',
     shadowColor: colors.preto,
@@ -21,8 +20,8 @@ export const styles = StyleSheet.create({
     marginVertical: 5,
   },
   textInput: {
-    width: 70,
-    fontFamily: 'Montserrat-Medium',
+    width: 200,
+    fontFamily: 'Montserrat-Regular',
     fontSize: 14,
     marginLeft: 10,
     marginRight: 10,

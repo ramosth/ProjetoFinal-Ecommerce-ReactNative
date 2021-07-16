@@ -1,5 +1,6 @@
 const colors = {
   azul: '#010035',
+  azulSuave: '#040252',
   laranja: '#FF6E4E',
   branco: '#fff',
   preto: '#000',

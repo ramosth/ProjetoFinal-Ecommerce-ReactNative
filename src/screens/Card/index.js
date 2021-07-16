@@ -41,7 +41,7 @@ export default function Card() {
   return (
     <View style={styles.container}>
       <View style={styles.titleWrapper}>
-        <HeaderTree />
+        <HeaderTree navProdutos={() => props.navigation.navigate('Produtos')} />
         <Text style={styles.title}>My Cart</Text>
       </View>
       <View style={styles.cardItemsWrapper}>

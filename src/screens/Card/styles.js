@@ -39,6 +39,7 @@ export const styles = StyleSheet.create({
     borderColor: colors.cinza,
     borderBottomWidth: 1,
     marginHorizontal: 5,
+    marginTop: 10,
   },
   preco: {
     height: windowHeigth * 0.1,
@@ -65,7 +66,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: windowHeigth * 0.35,
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 30,
   },
   buttonCheckout: {
     width: 330,
