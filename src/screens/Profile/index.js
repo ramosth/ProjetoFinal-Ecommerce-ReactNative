@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View, ScrollView, Text, Image} from 'react-native';
-import style from './Style';
 import Button from '../../Components/Button';
 import { UsuarioLogado } from '../../contexto/contextUsuario';
+import style from './style';
 
 const Profile = props => {
   const {usuario, logout} = React.useContext(UsuarioLogado);

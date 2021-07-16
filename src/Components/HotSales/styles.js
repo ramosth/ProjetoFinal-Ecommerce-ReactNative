@@ -28,7 +28,6 @@ export const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: colors.laranja,
     width: windowWidth / 1.1,
     height: windowHeigth / 3,
     marginLeft: 15,
@@ -75,7 +74,6 @@ export const styles = StyleSheet.create({
   cardRight: {
     flex: 1,
     alignItems: 'flex-end',
-    backgroundColor: colors.laranja,
     width: '60%',
     height: windowHeigth / 5.7,
     borderTopRightRadius: 10,
