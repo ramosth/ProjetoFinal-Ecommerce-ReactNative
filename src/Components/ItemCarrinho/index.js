@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import colors from '../../assets/colors/colors';
 import {styles} from './styles';
-import {View, Image, Text, Alert} from 'react-native';
+import {View, Image, Text} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Button from '../Button';
 import api from '../../services/Api/api';

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   View,
   Image,
@@ -78,6 +78,9 @@ export default function Login({ navigation }) {
               onChangeText={setSenha}
               placeholder="Digite a senha"
               iconName="ios-lock-closed-outline"
+              textContentType="password"
+              secureTextEntry={true}
+              password={true}
             />
             <Button
               titulo="Lembrar senha"

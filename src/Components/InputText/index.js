@@ -15,6 +15,9 @@ export default function InputText(props) {
         placeholder={props.placeholder}
         style={styles.textInput}
         placeholderTextColor={colors.cinza}
+        secureTextEntry={props.secureTextEntry}
+        password={props.password}
+        textContentType={props.textContentType}
       />
     </View>
   );
