@@ -59,7 +59,7 @@ const CardDetalhes = ({navigation, id}) => {
         </View>
         <ButtonOrange
           onPress={() => postCarrinho()}
-          texto={'Adicionar no Carrinho'}
+          texto={'Add to Cart'}
           preco={produto.precoDesconto}
         />
       </View>

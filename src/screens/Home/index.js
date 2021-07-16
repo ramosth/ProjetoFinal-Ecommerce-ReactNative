@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import Header from '../../Components/Header/Header';
 import Style from '../Home/Style';
 import SelectCategory from '../../Components/SelectCategory';
@@ -12,7 +12,7 @@ import BestSellerReduz from '../../Components/BestSellerReduz';
 const Home = ({navigation}) => {
   const [input, setInput] = useState('');
   return (
-    <View>
+    <ScrollView>
       <Header />
       <SelectCategory />
       <View style={Style.pesquisa}>
@@ -27,8 +27,8 @@ const Home = ({navigation}) => {
       <View>
         <HotSales />
       </View>
-      <BestSellerReduz />
-    </View>
+      <BestSellerReduz navigation={navigation} />
+    </ScrollView>
   );
 };
 

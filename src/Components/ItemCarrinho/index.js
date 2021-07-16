@@ -7,14 +7,22 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Button from '../Button';
 import api from '../../services/Api/api';
 
-export default function InputText(props) {
+export default function ItemCarrinho(props) {
   const [contador, setContador] = useState(1);
   const incremento = () => setContador(contador => contador + 1);
   const decremento = () => setContador(contador => contador - 1);
 
-  const deletarProduto = () => {
+  // const deletarProduto = async () => {
+  //   try {
+  //     await api.get('/carrinho');
+  //   } catch (error) {
+  //     console.log('Response: ', error);
+  //   }
+  // };
+
+  const deletarProduto = async () => {
     try {
-      api.delete(`/produtos/${props.id}`);
+      await api.delete(`/carrinho/${props.id}`);
     } catch (error) {
       console.log('Response: ', error);
     }
