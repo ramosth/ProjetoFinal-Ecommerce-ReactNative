@@ -5,11 +5,10 @@ import {View, Text, ScrollView, Alert, Image, FlatList} from 'react-native';
 import {styles} from './styles';
 import HeaderTree from '../../Components/HeaderTree/HeaderTree';
 import Button from '../../Components/Button';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import colors from '../../assets/colors/colors';
 import ItemCarrinho from '../../Components/ItemCarrinho';
+import {api} from '../../../src/services/Api/api';
 
-export default function Card() {
+export default function Card(props) {
   const listaProdutos = [
     {
       image: require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png'),
@@ -37,6 +36,19 @@ export default function Card() {
       preco: 3000,
     },
   ];
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    const obterProdutoAxios = async () => {
+      try {
+        const response = await api.get('/carrinho');
+        setProdutos(response.data);
+      } catch (error) {
+        console.log('Response: ', error);
+      }
+    };
+    obterProdutoAxios();
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -49,13 +61,14 @@ export default function Card() {
           <View>
             <FlatList
               showsVerticalScrollIndicator={false}
-              data={listaProdutos}
+              data={produtos}
               renderItem={({item}) => {
                 return (
                   <ItemCarrinho
-                    image={item.image}
+                    imagem={item.imagem}
                     nome={item.nome}
                     preco={item.preco}
+                    id={item.id}
                   />
                 );
               }}

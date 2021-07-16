@@ -23,6 +23,16 @@ const CardDetalhes = ({navigation, id}) => {
     obterProdutoAxios();
   }, []);
 
+  const postCarrinho = () => {
+    api
+      .post('/carrinho', {
+        nome: produto.name,
+        imagem: produto.imagem,
+        preco: produto.preco,
+      })
+      .then(({data}) => console.log(data));
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -48,6 +58,7 @@ const CardDetalhes = ({navigation, id}) => {
           <Text style={styles.textoDetalhes}>{produto.descricao}</Text>
         </View>
         <ButtonOrange
+          onPress={() => postCarrinho()}
           texto={'Adicionar no Carrinho'}
           preco={produto.precoDesconto}
         />

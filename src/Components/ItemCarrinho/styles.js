@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
   },
   imagem: {
-    height: 88,
+    height: 90,
     width: 88,
     borderRadius: 10,
   },

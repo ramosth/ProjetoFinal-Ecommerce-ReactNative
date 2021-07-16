@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import 'react-native-gesture-handler';
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -33,7 +33,7 @@ const TabNavigator = () => {
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <Entypo name="home" size={30} color={color} />
           ),
         }}
@@ -42,7 +42,7 @@ const TabNavigator = () => {
         name="Products"
         component={Produtos}
         options={{
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <Entypo name="list" size={32} color={color} />
           ),
         }}
@@ -51,7 +51,7 @@ const TabNavigator = () => {
         name="Card"
         component={Card}
         options={{
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialIcons name="shopping-cart" size={32} color={color} />
           ),
         }}
@@ -60,7 +60,7 @@ const TabNavigator = () => {
         name="Profile"
         component={Profile}
         options={{
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="account" size={32} color={color} />
           ),
         }}
@@ -73,11 +73,12 @@ export default function RotaLogin() {
   return (
     <Stack.Navigator
       initialRouteName="Home"
-      screenOptions={{ headerShown: false }}>
+      screenOptions={{headerShown: false}}>
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="Produtos" component={Produtos} />
       <Stack.Screen name="Card" component={Card} />
+      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 }
