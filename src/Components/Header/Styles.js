@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
-import color from '../../assets/colors/colors'
+/* eslint-disable prettier/prettier */
+import { StyleSheet } from 'react-native';
+import color from '../../assets/colors/colors';
 
 const Styles = StyleSheet.create({
     barraTopo: {
@@ -27,7 +28,13 @@ const Styles = StyleSheet.create({
     },
     filter: {
         color: color.azul,
+        // fontSize: 15,
+        fontFamily: 'Montserrat-Medium',
     },
-})
+    filterNome: {
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+    },
+});
 
 export default Styles;
