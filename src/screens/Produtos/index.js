@@ -6,7 +6,6 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 import BestSeller from '../../Components/BestSeller';
-import RotaLogin from '../../navigation/RotaLogin';
 import HeaderTree from '../../Components/HeaderTree/HeaderTree';
 
 const Produtos = ({ navigation}) => {
@@ -15,7 +14,6 @@ const Produtos = ({ navigation}) => {
     <HeaderTree navProdutos={() => navigation.goBack()}/>
     <Text style={styles.texto}>Products</Text>
     <BestSeller navigation={navigation}/>
-    <RotaLogin/>
   </View>
   );
 }

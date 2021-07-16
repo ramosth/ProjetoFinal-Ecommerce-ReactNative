@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: windowWidth / 1.1,
-    height: windowHeigth / 3,
+    height: windowHeigth / 4,
     marginLeft: 15,
     marginRight: 21,
     borderRadius: 10,
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
   cardLeft: {
     backgroundColor: colors.pretoSuave,
     width: '40%',
-    height: windowHeigth / 3.5,
+    height: windowHeigth / 4,
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
   },
@@ -81,7 +81,7 @@ export const styles = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: windowHeigth / 3.5,
+    height: windowHeigth / 4,
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
     resizeMode: 'cover',
