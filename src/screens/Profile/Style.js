@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { color } from 'react-native-reanimated';
 import colors from '../../assets/colors/colors';
 
 const style = StyleSheet.create({
@@ -12,7 +13,26 @@ const style = StyleSheet.create({
     backgroundColor: colors.cinzaChumbo,
   },
   meuPerfil: {fontSize: 16, color: 'white', fontFamily: 'Montserrat-Bold'},
-  nome: {fontSize: 22, fontFamily: 'Montserrat-Regular'},
+   nome: {fontSize: 16, fontFamily: 'Montserrat-Regular', marginBottom: 5},
+
+  textoEmail: {
+    marginTop: 30,
+    marginLeft: 10,
+    width: 500,
+    height: 50,
+  },
+  input: {
+    width: 330,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: colors.cinzaChumbo,
+    height: 40,
+    textAlign: 'center'
+  },
+  textoNome: {
+    marginTop: 30,
+    marginLeft: 10,
+  },
 
   image: {
     alignSelf: 'center',
@@ -28,9 +48,10 @@ const style = StyleSheet.create({
     borderRadius: 75,
   },
   buttonCheckout: {
-    marginTop: '70%',
+    marginTop: '20%',
     width: 330,
     height: 56,
+    marginLeft: 10,
   },
 });
 

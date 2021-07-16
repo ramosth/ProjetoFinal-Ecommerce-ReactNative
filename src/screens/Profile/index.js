@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useEffect, useState } from 'react';
-import { View, ScrollView, Text, Image } from 'react-native';
+import { View, ScrollView, Text, Image, TextInput } from 'react-native';
 import Button from '../../Components/Button';
 import { UsuarioLogado } from '../../contexto/contextUsuario';
 import style from './Style';
@@ -46,7 +46,7 @@ const Profile = props => {
 
   return (
     <ScrollView>
-      <View style={{ flex: 1, alignItems: 'center' }}>
+      <View style={{ flex: 1}}>
         <View style={style.fundo}>
           <Text style={style.meuPerfil}>Meu Perfil</Text>
           <View style={style.perfil}>
@@ -57,14 +57,22 @@ const Profile = props => {
             />
           </View>
         </View>
-        <View>
-          <Text style={style.nome}>{nome}</Text>
+        <View style={style.textoNome}>
+        <Text style={style.nome}>Nome</Text>
+          <TextInput
+          style={style.input}
+          placeholder={nome}
+          editable={false}
+          />
         </View>
-        <View>
-          <Text style={style.nome}>{email}</Text>
-        </View>
-        <View>
-          <Text style={style.nome}>{senha}</Text>
+
+        <View style={style.textoEmail}>
+          <Text style={style.nome}>Email</Text>
+          <TextInput
+          style={style.input}
+          placeholder={email}
+          editable={false}
+          />
         </View>
         <Button
           titulo={'Logout'}
