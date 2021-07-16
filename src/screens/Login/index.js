@@ -14,7 +14,6 @@ import { UsuarioLogado } from '../../contexto/contextUsuario';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Login({ navigation }) {
-  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
