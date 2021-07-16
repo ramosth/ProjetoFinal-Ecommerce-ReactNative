@@ -4,7 +4,7 @@ import colors from '../../../assets/colors/colors';
 const style = StyleSheet.create({
   card: {
     width: 170,
-    height: 230,
+    height: 240,
     borderRadius: 10,
     backgroundColor: '#FFF',
     paddingVertical: 15,
@@ -54,6 +54,10 @@ const style = StyleSheet.create({
   icone: {
     marginTop: '7%',
     color: colors.laranja,
+  },
+  produtos: {
+    width: '100%',
+    height: '85%',
   },
 });
 

@@ -4,6 +4,7 @@ import colors from '../../assets/colors/colors';
 const style = StyleSheet.create({
   container: {
     marginHorizontal: '5%',
+    marginBottom: 60,
   },
   row: {
     flexDirection: 'row',

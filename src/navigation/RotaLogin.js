@@ -49,15 +49,6 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Card"
-        component={Card}
-        options={{
-          tabBarIcon: ({color}) => (
-            <MaterialIcons name="shopping-cart" size={32} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Profile"
         component={Profile}
         options={{

@@ -45,7 +45,7 @@ const CardProduto = ({navigation}) => {
   };
 
   return (
-    <View>
+    <View style={style.produtos}>
       <FlatList
         columnWrapperStyle={{justifyContent: 'space-between'}}
         numColumns={2}

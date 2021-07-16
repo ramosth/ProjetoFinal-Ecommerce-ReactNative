@@ -9,6 +9,7 @@ import ItemCarrinho from '../../Components/ItemCarrinho';
 import {api} from '../../../src/services/Api/api';
 
 export default function Card(props) {
+  const [precoTotal, setPrecoTotal] = useState(0);
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
@@ -22,6 +23,12 @@ export default function Card(props) {
     };
     obterProdutoAxios();
   }, []);
+
+  // useEffect(() => {
+  //   const calcularTotal = () => {
+  //     Map.produtos;
+  //   };
+  // }, []);
 
   return (
     <View style={styles.container}>
@@ -53,7 +60,7 @@ export default function Card(props) {
         <View style={styles.preco}>
           <View style={styles.totalWrapper}>
             <Text style={styles.totalTexto}>Total</Text>
-            <Text style={styles.totalValor}>R$6.000</Text>
+            <Text style={styles.totalValor}>{precoTotal}</Text>
           </View>
           <View style={styles.totalWrapper}>
             <Text style={styles.totalTexto}>Delivery</Text>
