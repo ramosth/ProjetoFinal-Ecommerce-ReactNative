@@ -1,9 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useEffect, useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-import Seta from 'react-native-vector-icons/MaterialIcons';
-import Filter from 'react-native-vector-icons/AntDesign';
 import Styles from './Styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 

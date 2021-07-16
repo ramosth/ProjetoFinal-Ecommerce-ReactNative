@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { useEffect, useState } from 'react';
-import { View, ScrollView, Text, Image, TextInput } from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, ScrollView, Text, Image, TextInput} from 'react-native';
 import Button from '../../Components/Button';
-import { UsuarioLogado } from '../../contexto/contextUsuario';
+import {UsuarioLogado} from '../../contexto/contextUsuario';
 import style from './Style';
 
 const Profile = props => {
@@ -11,7 +11,7 @@ const Profile = props => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  const { usuario, logout } = React.useContext(UsuarioLogado);
+  const {usuario, logout} = React.useContext(UsuarioLogado);
   console.log('Home: ', usuario);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const Profile = props => {
 
   return (
     <ScrollView>
-      <View style={{ flex: 1}}>
+      <View style={{flex: 1}}>
         <View style={style.fundo}>
           <Text style={style.meuPerfil}>Meu Perfil</Text>
           <View style={style.perfil}>
@@ -57,28 +57,30 @@ const Profile = props => {
             />
           </View>
         </View>
-        <View style={style.textoNome}>
-        <Text style={style.nome}>Nome</Text>
-          <TextInput
-          style={style.input}
-          placeholder={nome}
-          editable={false}
-          />
-        </View>
+        <View style={{alignItems: 'center'}}>
+          <View style={style.textoNome}>
+            <Text style={style.nome}>Nome</Text>
+            <TextInput
+              style={style.input}
+              placeholder={nome}
+              editable={false}
+            />
+          </View>
 
-        <View style={style.textoEmail}>
-          <Text style={style.nome}>Email</Text>
-          <TextInput
-          style={style.input}
-          placeholder={email}
-          editable={false}
+          <View style={style.textoNome}>
+            <Text style={style.nome}>Email</Text>
+            <TextInput
+              style={style.input}
+              placeholder={email}
+              editable={false}
+            />
+          </View>
+          <Button
+            titulo={'Logout'}
+            buttonStyles={style.buttonCheckout}
+            onPress={() => logout()}
           />
         </View>
-        <Button
-          titulo={'Logout'}
-          buttonStyles={style.buttonCheckout}
-          onPress={() => logout()}
-        />
       </View>
     </ScrollView>
   );
