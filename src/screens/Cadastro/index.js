@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   SafeAreaView,
@@ -11,11 +11,11 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import { styles } from './styles';
+import {styles} from './styles';
 import InputText from '../../Components/InputText';
 import Button from '../../Components/Button';
 
-export default function Cadastro({ navigation }) {
+export default function Cadastro({navigation}) {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -33,9 +33,9 @@ export default function Cadastro({ navigation }) {
         <View style={styles.titlesWrapper}>
           <Text style={styles.titlesSubtitle}>Cadastro</Text>
           <Image
-        source={require('../../assets/images/logo.png')}
-        style={styles.logo}
-      />
+            source={require('../../assets/images/logo.png')}
+            style={styles.logo}
+          />
         </View>
         {/* Inputs */}
         <View style={styles.inputsWrapper}>
@@ -70,7 +70,8 @@ export default function Cadastro({ navigation }) {
               titulo="Lembrar senha"
               buttonStyles={[styles.buttonLembrarSenha]}
               tituloStyles={[styles.tituloLembrarSenha]}
-              onPress={() => Alert.alert('lembrar senha')} />
+              onPress={() => Alert.alert('lembrar senha')}
+            />
           </View>
           <View style={styles.inputItemWrapper}>
             <Text style={styles.inputItemTitle}>Confirma senha</Text>
@@ -88,21 +89,16 @@ export default function Cadastro({ navigation }) {
             path={require('../../assets/images/google.png')}
             titulo="Entre pelo Google"
             buttonStyles={styles.buttonStyles}
-            tituloStyles={styles.tituloStyles} />
+            tituloStyles={styles.tituloStyles}
+          />
         </View>
         <View style={styles.buttonCreate}>
           <Button
             titulo="Cadastrar conta"
             tituloStyles={styles.tituloStyles}
             buttonStyles={[styles.buttonStyles]}
-            onPress={() => chamaLogin()} />
-        </View>
-        <View style={styles.buttonLogin}>
-          <Button
-            titulo="Login"
-            buttonStyles={styles.buttonStyles}
-            tituloStyles={styles.tituloStyles}
-            onPress={() => navigation.navigate('Login')} />
+            onPress={() => chamaLogin()}
+          />
         </View>
       </ScrollView>
     </View>

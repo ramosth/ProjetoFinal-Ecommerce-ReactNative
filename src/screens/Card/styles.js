@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: windowHeigth * 0.35,
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: 20,
   },
   buttonCheckout: {
     width: 330,

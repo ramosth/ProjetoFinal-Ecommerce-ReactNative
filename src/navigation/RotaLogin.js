@@ -24,6 +24,7 @@ const TabNavigator = () => {
           backgroundColor: colors.azul,
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
+          position: 'absolute',
         },
         activeTintColor: colors.laranja,
         inactiveTintColor: colors.cinza,

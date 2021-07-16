@@ -9,33 +9,6 @@ import ItemCarrinho from '../../Components/ItemCarrinho';
 import {api} from '../../../src/services/Api/api';
 
 export default function Card(props) {
-  const listaProdutos = [
-    {
-      image: require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png'),
-      nome: 'Galaxy Note 20 Ultra',
-      preco: 3000,
-    },
-    {
-      image: require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png'),
-      nome: 'Galaxy Note 20 Ultra',
-      preco: 3000,
-    },
-    {
-      image: require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png'),
-      nome: 'Galaxy Note 20 Ultra',
-      preco: 3000,
-    },
-    {
-      image: require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png'),
-      nome: 'Galaxy Note 20 Ultra',
-      preco: 3000,
-    },
-    {
-      image: require('../../assets/images/Samsung-Galaxy-S20-Ultra-1.png'),
-      nome: 'Galaxy Note 20 Ultra',
-      preco: 3000,
-    },
-  ];
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
