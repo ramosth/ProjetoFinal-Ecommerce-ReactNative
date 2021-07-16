@@ -36,10 +36,10 @@ const style = StyleSheet.create({
 
   image: {
     alignSelf: 'center',
-    width: 140,
-    height: 140,
-    resizeMode: 'contain',
-    borderRadius: 75,
+    width: 150,
+    height: 150,
+    resizeMode: 'cover',
+    borderRadius: 150,
   },
   perfil: {
     width: 150,

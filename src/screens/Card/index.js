@@ -1,7 +1,6 @@
-/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable prettier/prettier */
 import React, {useState, useEffect} from 'react';
-import {View, Text, ScrollView, Alert, Image, FlatList} from 'react-native';
+import {View, Text, Alert, FlatList} from 'react-native';
 import {styles} from './styles';
 import HeaderTree from '../../Components/HeaderTree/HeaderTree';
 import Button from '../../Components/Button';

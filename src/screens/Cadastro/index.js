@@ -11,7 +11,7 @@ export default function Cadastro({navigation}) {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [senhaConfirma, setSenhaConfirma] = useState('');
+  const [imagem, setImagem] = useState('');
 
   const chamaLogin = () => {
     Alert.alert('Cadastro Efetuado', 'Usuário registrado com sucesso!');
@@ -22,6 +22,7 @@ export default function Cadastro({navigation}) {
     AsyncStorage.setItem('NomeCadastro', nome);
     AsyncStorage.setItem('EmailCadastro', email);
     AsyncStorage.setItem('SenhaCadastro', senha);
+    AsyncStorage.setItem('ImagemCadastro', imagem);
     chamaLogin();
   };
 
@@ -77,11 +78,11 @@ export default function Cadastro({navigation}) {
             />
           </View>
           <View style={styles.inputItemWrapper}>
-            <Text style={styles.inputItemTitle}>Confirma senha</Text>
+            <Text style={styles.inputItemTitle}>Imagem de perfil</Text>
             <InputText
-              value={senhaConfirma}
-              onChangeText={setSenhaConfirma}
-              placeholder="Confirme a senha"
+              value={imagem}
+              onChangeText={setImagem}
+              placeholder="Informe a url da imagem"
               iconName="ios-lock-closed-outline"
             />
           </View>

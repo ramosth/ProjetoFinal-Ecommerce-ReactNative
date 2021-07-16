@@ -9,7 +9,7 @@ import style from './Style';
 const Profile = props => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+  const [imagem, setImagem] = useState('');
 
   const { usuario, logout } = React.useContext(UsuarioLogado);
   console.log('Home: ', usuario);
@@ -29,16 +29,16 @@ const Profile = props => {
       }
     };
 
-    const recuperarSenha = async () => {
-      const senhaSalvo = await AsyncStorage.getItem('SenhaCadastro');
-      if (senhaSalvo) {
-        setSenha(senhaSalvo);
+    const recuperarImagem = async () => {
+      const imagemSalvo = await AsyncStorage.getItem('ImagemCadastro');
+      if (imagemSalvo) {
+        setImagem(imagemSalvo);
       }
     };
 
     recuperarNome();
     recuperarEmail();
-    recuperarSenha();
+    recuperarImagem();
   }, []);
 
   return (
@@ -50,7 +50,7 @@ const Profile = props => {
             <Image
               resizeMode="contain"
               style={style.image}
-              source={require('../../assets/images/perfil.png')}
+              source={{uri: imagem}}
             />
           </View>
         </View>
