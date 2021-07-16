@@ -105,6 +105,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Medium',
     fontSize: 25,
     color: colors.branco,
+    textAlign: 'center',
   },
   tituloDisable: {
     opacity: 0.3,
@@ -114,7 +115,7 @@ export const styles = StyleSheet.create({
     height: 88,
     width: 22,
     borderRadius: 26,
-    marginRight: 15,
+    marginRight: 30,
   },
   buttonQuantidade: {
     backgroundColor: 'transparent',

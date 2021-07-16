@@ -69,6 +69,9 @@ export default function Login({navigation}) {
               onChangeText={setSenha}
               placeholder="Digite a senha"
               iconName="ios-lock-closed-outline"
+              textContentType="password"
+              secureTextEntry={true}
+              password={true}
             />
             <Button
               titulo="Lembrar senha"
