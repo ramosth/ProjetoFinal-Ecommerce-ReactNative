@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import colors from '../../assets/colors/colors';
-import { styles } from './styles';
+import {styles} from './styles';
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import {View, TextInput} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function InputText(props) {

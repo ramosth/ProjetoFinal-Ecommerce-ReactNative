@@ -6,7 +6,7 @@ import Styles from '../HeaderTwo/Styles';
 const HeaderTwo = ({nav}) => {
   return (
     <View style={Styles.topo}>
-      {/* <TouchableOpacity onPress={() => navigation.goBack()}> */}
+      {/* <TouchableOpacity onPress={() => nav.goBack()}> */}
       <TouchableOpacity onPress={nav}>
         <Icon name="arrow-left" style={Styles.setaRetorno} />
       </TouchableOpacity>

@@ -28,7 +28,7 @@ const style = StyleSheet.create({
     borderRadius: 75,
   },
   buttonCheckout: {
-    marginTop: 300,
+    marginTop: '70%',
     width: 330,
     height: 56,
   },

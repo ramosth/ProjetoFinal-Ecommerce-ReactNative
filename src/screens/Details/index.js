@@ -4,13 +4,14 @@ import HeaderTwo from '../../Components/HeaderTwo/HeaderTwo';
 import CardFoto from '../../Components/CardFotoProduto';
 import CardDetalhes from '../../Components/CardDetalhes';
 
-const Details = props => {
+const Details = ({route, navigation}) => {
+  const {item} = route.params;
   return (
     <ScrollView>
       <View>
-        <HeaderTwo nav={() => props.navigation.navigate('Home')} />
-        <CardFoto />
-        <CardDetalhes />
+        <HeaderTwo nav={() => navigation.goBack()} />
+        <CardFoto id={item} />
+        <CardDetalhes id={item} navigation={navigation} />
       </View>
     </ScrollView>
   );

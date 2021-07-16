@@ -34,8 +34,8 @@ const CardProduto = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity style={style.margem}>
             <View style={style.containerPreco}>
-              <Text style={style.price}>R${item.preco}</Text>
-              <Text style={style.priceRiscado}>R${item.priceSale}</Text>
+              <Text style={style.price}>R${item.precoDesconto}</Text>
+              <Text style={style.priceRiscado}>R${item.preco}</Text>
             </View>
             <Text style={style.nomeProduto}>{item.name}</Text>
           </TouchableOpacity>
