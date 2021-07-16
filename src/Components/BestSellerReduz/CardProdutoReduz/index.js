@@ -3,10 +3,9 @@ import React, {useEffect, useState} from 'react';
 import {View, Image, Text, TouchableOpacity, FlatList} from 'react-native';
 import style from './style';
 import Icon from 'react-native-vector-icons/EvilIcons';
-// import produtosData from '../../../assets/data/produtsData';
-import { api } from '../../../services/Api/api';
+import {api} from '../../../services/Api/api';
 
-const CardProduto = ({ navigation }) => {
+const CardProduto = ({navigation}) => {
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
@@ -25,12 +24,12 @@ const CardProduto = ({ navigation }) => {
     obterProdutoAxios();
   }, []);
 
-  const renderPopularItem = ({ item }) => {
+  const renderPopularItem = ({item}) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate('Details', { item: item.id })}>
+        onPress={() => navigation.navigate('Details', {item: item.id})}>
         <View style={style.card}>
-          <Image style={style.imagem} source={{ uri: item.imagem }} />
+          <Image style={style.imagem} source={{uri: item.imagem}} />
           <TouchableOpacity style={style.favorito}>
             <Icon style={style.icone} name="heart" size={20} />
           </TouchableOpacity>

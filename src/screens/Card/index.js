@@ -23,12 +23,6 @@ export default function Card(props) {
     obterProdutoAxios();
   }, []);
 
-  // useEffect(() => {
-  //   const calcularTotal = () => {
-  //     Map.produtos;
-  //   };
-  // }, []);
-
   return (
     <View style={styles.container}>
       <View style={styles.titleWrapper}>

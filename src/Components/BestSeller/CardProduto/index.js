@@ -4,7 +4,6 @@ import React, {useEffect, useState} from 'react';
 import {View, Image, Text, TouchableOpacity, FlatList} from 'react-native';
 import style from './style';
 import Icon from 'react-native-vector-icons/EvilIcons';
-// import produtosData from '../../../assets/data/produtsData';
 import {api} from '../../../services/Api/api';
 
 const CardProduto = ({navigation}) => {

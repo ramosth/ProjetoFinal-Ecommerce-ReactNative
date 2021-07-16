@@ -13,7 +13,7 @@ const Home = ({navigation}) => {
   const [input, setInput] = useState('');
   return (
     <ScrollView>
-      <Header />
+      <Header navigation={navigation} />
       <SelectCategory />
       <View style={Style.pesquisa}>
         <Pesquisa

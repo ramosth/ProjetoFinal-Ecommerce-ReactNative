@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import colors from '../../assets/colors/colors';
 import ButtonOrange from '../ButtonOrange';
@@ -7,7 +7,7 @@ import Stars from '../Stars';
 import styles from './styles';
 import {api} from '../../../src/services/Api/api';
 
-const CardDetalhes = ({navigation, id}) => {
+const CardDetalhes = ({id}) => {
   const [coracao, setCoracao] = useState(false);
   const [produto, setProduto] = useState([]);
 
@@ -30,7 +30,7 @@ const CardDetalhes = ({navigation, id}) => {
         imagem: produto.imagem,
         preco: produto.preco,
       })
-      .then(({data}) => console.log(data));
+      .then(({data}) => Alert.alert('Adding to Cart'));
   };
 
   return (

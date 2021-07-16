@@ -3,7 +3,7 @@ import colors from '../../assets/colors/colors';
 
 const styles = StyleSheet.create({
   container: {},
-  nomeProduto: {fontSize: 24, fontFamily: 'Montserrat-Bold'},
+  nomeProduto: {fontSize: 24, fontFamily: 'Montserrat-Bold', width: 280},
   favoritar: {
     width: 37,
     height: 37,

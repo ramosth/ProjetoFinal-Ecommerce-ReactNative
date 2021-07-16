@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {View, Image, ScrollView, Text, Alert} from 'react-native';
-// eslint-disable-next-line prettier/prettier
 import {styles} from './styles';
 import InputText from '../../Components/InputText';
 import Button from '../../Components/Button';
@@ -27,13 +26,15 @@ export default function Cadastro({navigation}) {
   };
 
   const lembrarSenha = () => {
-    AsyncStorage.setItem('LembrarSenha', JSON.stringify({ email: email, senha: senha }));
+    AsyncStorage.setItem(
+      'LembrarSenha',
+      JSON.stringify({email: email, senha: senha}),
+    );
   };
 
   return (
     <View style={styles.container}>
       <ScrollView>
-        {/* Titles */}
         <View style={styles.titlesWrapper}>
           <Text style={styles.titlesSubtitle}>Cadastro</Text>
           <Image
@@ -41,7 +42,6 @@ export default function Cadastro({navigation}) {
             style={styles.logo}
           />
         </View>
-        {/* Inputs */}
         <View style={styles.inputsWrapper}>
           <View style={styles.inputItemWrapper}>
             <Text style={styles.inputItemTitle}>Nome</Text>
@@ -87,7 +87,6 @@ export default function Cadastro({navigation}) {
             />
           </View>
         </View>
-        {/* Button */}
         <View style={[styles.buttonSigIn]}>
           <Button
             path={require('../../assets/images/google.png')}

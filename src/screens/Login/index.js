@@ -1,24 +1,17 @@
 /* eslint-disable prettier/prettier */
-import React, { useContext, useEffect, useState } from 'react';
-import {
-  View,
-  Image,
-  ScrollView,
-  Text,
-  Alert,
-} from 'react-native';
-import { styles } from './styles';
+import React, {useContext, useState} from 'react';
+import {View, Image, ScrollView, Text, Alert} from 'react-native';
+import {styles} from './styles';
 import InputText from '../../Components/InputText';
 import Button from '../../Components/Button';
-import { UsuarioLogado } from '../../contexto/contextUsuario';
+import {UsuarioLogado} from '../../contexto/contextUsuario';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Login({ navigation }) {
+export default function Login({navigation}) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  // ACESSANDO O CONTEXTO
-  const { login } = useContext(UsuarioLogado);
+  const {login} = useContext(UsuarioLogado);
 
   const chamaLogin = async () => {
     const nomeSalvo = await AsyncStorage.getItem('NomeCadastro');
@@ -39,7 +32,7 @@ export default function Login({ navigation }) {
     }
   };
 
-  const setarSenha = async (value) => {
+  const setarSenha = async value => {
     const dadoSalvo = await AsyncStorage.getItem('LembrarSenha');
     const convertido = JSON.parse(dadoSalvo);
     setEmail(value);
@@ -52,7 +45,6 @@ export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView>
-        {/* Titles */}
         <View style={styles.titlesWrapper}>
           <Text style={styles.titlesSubtitle}>Login</Text>
           <Image
@@ -60,13 +52,12 @@ export default function Login({ navigation }) {
             style={styles.logo}
           />
         </View>
-        {/* Inputs */}
         <View style={styles.inputsWrapper}>
           <View style={styles.inputItemWrapper}>
             <Text style={styles.inputItemTitle}>Email</Text>
             <InputText
               value={email}
-              onChangeText={(value) => setarSenha(value)}
+              onChangeText={value => setarSenha(value)}
               placeholder="Digite o email"
               iconName="mail-outline"
             />
@@ -83,34 +74,36 @@ export default function Login({ navigation }) {
               titulo="Lembrar senha"
               buttonStyles={[styles.buttonLembrarSenha]}
               tituloStyles={[styles.tituloLembrarSenha]}
-              onPress={() => Alert.alert('lembrar senha')} />
+              onPress={() => Alert.alert('lembrar senha')}
+            />
           </View>
         </View>
-        {/* Button */}
         <View style={[styles.buttonSigIn]}>
           <Button
             path={require('../../assets/images/google.png')}
             titulo="Entre com o Google"
             buttonStyles={styles.buttonStyles}
             tituloStyles={styles.tituloStyles}
-            onPress={() => Alert.alert('Login pelo Gmail')} />
+            onPress={() => Alert.alert('Login pelo Gmail')}
+          />
         </View>
         <View style={styles.buttonCreate}>
           <Button
             titulo="Cadastre-se"
             tituloStyles={styles.tituloStyles}
             buttonStyles={[styles.buttonStyles]}
-            onPress={() => navigation.navigate('Cadastro')} />
+            onPress={() => navigation.navigate('Cadastro')}
+          />
         </View>
         <View style={styles.buttonLogin}>
           <Button
             titulo="Login"
             buttonStyles={styles.buttonStyles}
             tituloStyles={styles.tituloStyles}
-            onPress={chamaLogin} />
+            onPress={chamaLogin}
+          />
         </View>
       </ScrollView>
     </View>
   );
 }
-

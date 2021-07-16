@@ -3,8 +3,9 @@ import React, {useEffect, useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import Styles from './Styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
-const Header = () => {
+const Header = ({navigation}) => {
   const [nome, setNome] = useState('');
   useEffect(() => {
     const recuperarNome = async () => {
@@ -24,6 +25,9 @@ const Header = () => {
         <Text style={Styles.filter}>
           Olá, <Text style={Styles.filterNome}>{nome}</Text>
         </Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Card')}>
+        <Icon name="handbag" style={Styles.bag} />
       </TouchableOpacity>
     </View>
   );

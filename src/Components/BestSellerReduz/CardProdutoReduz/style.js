@@ -4,7 +4,7 @@ import colors from '../../../assets/colors/colors';
 const style = StyleSheet.create({
   card: {
     width: 140,
-    height: 180,
+    height: 190,
     borderRadius: 10,
     backgroundColor: '#FFF',
     paddingVertical: 15,

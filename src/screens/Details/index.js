@@ -10,7 +10,7 @@ const Details = ({route, navigation}) => {
     <ScrollView>
       <View>
         <HeaderTwo
-          goback={() => navigation.goBack()}
+          goback={() => navigation.navigate('Home')}
           carrinho={() => navigation.navigate('Card')}
         />
         <CardFoto id={item} />
